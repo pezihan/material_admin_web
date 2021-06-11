@@ -1,0 +1,72 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html, body, #app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+    color: black;
+    font-size: 18px;
+}
+
+a {
+    list-style: none;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+input {
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none !important;
+        margin: 0;
+    }
+
+button {
+    outline: none;
+}
+
+.el-card {
+    margin-top: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15) !important;
+}
+
+.el-table {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.el-pagination {
+    margin-top: 15px;
+}
+.el-progress {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.input-with-select {
+    width: 120px;
+}
+
+.el-radio {
+    margin: 10px;
+}
+
+.el-alert {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
