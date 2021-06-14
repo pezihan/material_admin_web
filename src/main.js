@@ -57,6 +57,13 @@ Vue.filter('sexConvert', function (data) { // 过滤性别
   }
 })
 
+Vue.filter('textFilter', function (data) {
+  if (data === null || data === '') {
+    return '未设置'
+  }
+  return data
+})
+
 new Vue({
   router,
   render: h => h(App)

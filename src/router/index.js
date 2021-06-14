@@ -3,6 +3,12 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login.vue'
 import Home from '@/components/Home.vue'
 import Welcome from '@/components/Welcome.vue'
+import AllAccount from '@/views/admin/AllAccount.vue'
+import AllScene from '@/views/scene/AllScene.vue'
+import Keyword from '@/views/scene/Keyword.vue'
+import SceneCrawling from '@/views/scene/SceneCrawling.vue'
+import AllTag from '@/views/tag/AllTag.vue'
+import AllUser from '@/views/user/AllUser.vue'
 
 Vue.use(VueRouter)
 
@@ -13,7 +19,13 @@ const routes = [
     component: Home,
     redirect: '/welcome',
     children: [
-      { path: '/welcome', component: Welcome }
+      { path: '/welcome', component: Welcome },
+      { path: '/allAccount', component: AllAccount },
+      { path: '/allScene', component: AllScene },
+      { path: '/keyword', component: Keyword },
+      { path: '/sceneCrawling', component: SceneCrawling },
+      { path: '/allTag', component: AllTag },
+      { path: '/AllUser', component: AllUser }
     ]
   }
 ]
