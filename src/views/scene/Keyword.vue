@@ -104,7 +104,7 @@ export default {
       }).then(async ({ value }) => {
         const { data: res } = await this.$http.put('/setkeyword', { keyword: keyword, newKeyword: value.trim() })
         if (res.meta.status !== 201) {
-            return this.$message.error(res.meta.msg)
+          return this.$message.error(res.meta.msg)
         }
         this.$message.success('修改成功')
         // 删除成功刷新列表

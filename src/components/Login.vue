@@ -141,7 +141,7 @@ export default {
     }
     .el-input__inner {
         background-color: RGBA(255,255,255,.37) !important;
-        border: none;
+        // border: none;
     }
     input::-webkit-input-placeholder{
         color:rgb(146, 146, 146) !important;

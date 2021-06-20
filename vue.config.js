@@ -13,6 +13,5 @@ module.exports = {
   },
 
   publicPath: './',
-  outputDir: 'C:\\web前端\\素材分享web\\material_server\\web',
-  lintOnSave: false
+  outputDir: 'C:\\web前端\\素材分享web\\material_server\\web'
 }
