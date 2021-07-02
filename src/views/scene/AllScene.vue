@@ -29,6 +29,7 @@
                     </el-input>
                 </el-col>
                 <el-col :span="8">
+                    <el-button type="primary" icon="el-icon-edit" @click="setUserClick">修改所属用户</el-button>
                     <el-button type="danger" icon="el-icon-delete" @click="deleteScene">批量删除</el-button>
                 </el-col>
             </el-row>
@@ -191,6 +192,28 @@ export default {
     // 监听页码值改变的事件
     handleCurrentChange (newPage) {
       this.queryInfo.start = newPage
+      this.getSceneList()
+    },
+    // 修改用户所属
+    async setUserClick () {
+      if (this.multipleSelection.length === 0) {
+        return this.$message.error('请选择素材！')
+      }
+      const sate = await this.$prompt('请输入要用户id', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消'
+      }).catch(err => {
+        return err
+      })
+      if (sate === 'cancel') {
+        this.$message.info('已取消')
+      }
+      const { data: res } = await this.$http.post('/setSceneUser', { scene_Arr: this.multipleSelection, user_id: sate.value.trim() })
+      if (res.meta.status !== 201) {
+        return this.$message.error(res.meta.msg)
+      }
+      this.$message.success('修改成功')
+      // 删除成功刷新列表
       this.getSceneList()
     },
     // 批量删除素材
