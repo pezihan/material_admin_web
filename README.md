@@ -2,7 +2,7 @@
 
 **介绍**
 
-本项目为基于 material_server服务api的后台管理，用来管理网页端用户及作品的管理，已打包成静态资源放到了material_server下，这个为 vue 源码
+本项目为基于 material_server服务api的后台管理，用来管理网页端用户及作品的管理，已打包成静态资源放到了material_server下，这个是 vue 源码
 
 **管理端默认账户： admin  密码：123456**
 
