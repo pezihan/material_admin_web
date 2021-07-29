@@ -30,7 +30,7 @@
                 </el-col>
                 <el-col :span="8">
                     <el-button type="primary" icon="el-icon-edit" @click="setUserClick">修改所属用户</el-button>
-                    <el-button type="danger" icon="el-icon-delete" @click="deleteScene">批量删除</el-button>
+                    <el-button type="danger" icon="el-icon-delete" @click="deleteScene">批量下线</el-button>
                 </el-col>
             </el-row>
 
@@ -68,7 +68,7 @@
                   <template slot-scope="scope">
                       <el-radio-group v-model="scope.row.state" size="mini" @change="sceneStatuChange(scope.row.id,scope.row.state)">
                         <el-radio  :label="1" border>上线</el-radio>
-                        <el-radio  :label="2" border>删除</el-radio>
+                        <el-radio  :label="2" border>下线</el-radio>
                       </el-radio-group>
                     </template>
                 </el-table-column>

@@ -262,8 +262,8 @@ export default {
     },
     // 选择文件之后发送请求
     async uploadChange  (e) {
-      // 图片大小不超过5M
-      const limitSize = 1024 * 1024 * 1 // 5M
+      // 图片大小不超过1M
+      const limitSize = 1024 * 1024 * 1 // 1M
       const file = e.target.files[0]
       if (file.size > limitSize) {
         this.$message.error('头像大小不能大于1M')
